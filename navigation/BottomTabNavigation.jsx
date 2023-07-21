@@ -1,9 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import Home from '../screens/Home'
-import Search from '../screens/Search'
-import Propfile from '../screens/Propfile'
+import {Home,Profile,Search } from '../screens/index'
 import { Ionicon } from "@expo/vector-icons"
 import { COLORS } from "../constants/index"
 
@@ -40,7 +38,7 @@ const BottomTabNavigation = () => {
                     }
                 }
             } />
-           <Tab.Screen name="Propfile" component={Propfile} options={
+           <Tab.Screen name={"person-outline"} component={Profile} options={
                 {
                     tabBarIcon: ({ focused }) => {
                         return <Ionicon name={"search-sharp"} size={24} color={focused ? COLORS.primary : COLORS.gray2} />

@@ -2,7 +2,7 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import {Home,Profile,Search } from '../screens/index'
-import { Ionicon } from "@expo/vector-icons"
+import { Ionicons } from "@expo/vector-icons"
 import { COLORS } from "../constants/index"
 
 const Tab = createBottomTabNavigator()
@@ -27,21 +27,21 @@ const BottomTabNavigation = () => {
             <Tab.Screen name="Home" component={Home} options={
                 {
                     tabBarIcon: ({ focused }) => {
-                        return <Ionicon name={focused ? "home" : "home-outline"} size={24} color={focused ? COLORS.primary : COLORS.gray2} />
+                        return <Ionicons name={focused ? "home" : "home-outline"} size={24} color={focused ? COLORS.primary : COLORS.gray2} />
                     }
                 }
             } />
             <Tab.Screen name="Search" component={Search} options={
                 {
                     tabBarIcon: ({ focused }) => {
-                        return <Ionicon name={"search-sharp"} size={24} color={focused ? COLORS.primary : COLORS.gray2} />
+                        return <Ionicons name={"search-sharp"} size={24} color={focused ? COLORS.primary : COLORS.gray2} />
                     }
                 }
             } />
            <Tab.Screen name={"person-outline"} component={Profile} options={
                 {
                     tabBarIcon: ({ focused }) => {
-                        return <Ionicon name={"search-sharp"} size={24} color={focused ? COLORS.primary : COLORS.gray2} />
+                        return <Ionicons name={"person"} size={24} color={focused ? COLORS.primary : COLORS.gray2} />
                     }
                 }
             } />
